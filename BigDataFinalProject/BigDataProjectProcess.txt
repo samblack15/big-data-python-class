@@ -1,0 +1,18 @@
+URL: 
+Title: Predicting Diamond Price using kNN algorithm
+
+Abstract: I will predict the price of a diamond given certain characteristics about it (including size, cut, color, clarity) using the kNN algorithm. I will implement several variations of the algorithm, using different parameters for k, different distance functions, and fuzzy/non-fuzzy implementations in attempt to find the variation with the lowest mean squared error. I will analyze which parameters work best and why.
+Algorithm/Domain of Study: kNN
+I find kNN to be an important and interesting algorithm for regression analysis because it is very simple, yet also very powerful. For each of my run-throughs of the kNN algorithm (using different parameters), I will be splitting up the data into training/test data sets (arounds 2/3 : 1/3 train-test ratio, test data will be queried against the training data). 
+My dataset is fortunately pretty clean, and shouldn't need to do too much data manipulation. I should only need to convert the categorical variables to dummy variables.
+Datasource: https://www.kaggle.com/shivam2503/diamonds/data
+This dataset provides information on the price of over 50,000 diamonds given their carat weight, cut, color, clarity, depth percentage height, length, width, and table width. Each of these features is numerical value except for cut, color, and clarity, which are categorical. These will be converted to dummy variables for kNN.
+Graphics: I plan to implement a couple graphs that show how well the MSE changes while using different parameters for the algorithm. Additionally I think it would be cool to split the data into its 2 principal components and then apply kNN. Then, I'd like to create a 3d graph with the x axis being Principal Component #1, and the y axis being Principal component #2, and the z-axis being the MSE for each of the test cases.
+Challenges: Haven't faced many challenges thus far. However, I feel like the hardest part will be graphing (when I get to that stage), simply because I'm not very familiar with matplotlib. I can also foresee trying to explain why certain parameters work better than others being difficult. That will require research. 
+Reference URLS:
+https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/ -Has a nice section on parameter tuning using cross-validation method
+https://www.quora.com/How-can-I-use-KNN-for-mixed-data-categorical-and-numerical -There's a good answer about best ways to mix categorical and numerical data with kNN
+https://shapeofdata.wordpress.com/2013/05/07/k-nearest-neighbors/ -Theres a couple of good paragraphs that explain in detail what happens when k is too small or when k is too big. Important for when explaining why certain parameters work better than others in my dataset.
+http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsRegressor.html -I will be using scikit-learn library to run kNN algorithm, so I will be referencing their documentation heavily.
+
+https://coolstatsblog.com/2015/03/21/principal-component-analysis-explained/ -This document provides a good introduction to PCA, a technique I have used before, but am not entirlely sure with how it works. I will reference more advance PCA documents if I feel that I need them to explain certain concepts.
